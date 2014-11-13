@@ -1,3 +1,0 @@
-[submodule "ansible-examples"]
-	path = ansible-examples
-	url = git@github.com:ansible/ansible-examples.git

@@ -5,6 +5,13 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN pip install ansible
-ADD ansible-examples /srv/ansible
+RUN ansible-galaxy install \
+    Ansibles.hostname \
+    Ansibles.apt \
+    Ansibles.build-essential \
+    Ansibles.perl \
+    Ansibles.monit \
+    ANXS.nginx
+ADD site.yml /srv/ansible/site.yml
 
 CMD ["/sbin/my_init"]

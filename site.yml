@@ -1,0 +1,6 @@
+---
+- name: Nginx server
+  hosts: all
+  sudo: yes
+  roles:
+    - ANXS.nginx
